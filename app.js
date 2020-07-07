@@ -19,12 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 /* GET home page. */
 app.get('/', function(req, res, next) {
   //res.render('index', { title: 'Express' });
-  res.sendFile(path.join(__dirname, 'build/index.html'));
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
 // app.use('/', indexRouter);
